@@ -1,0 +1,2194 @@
+{
+    "bottleneck3_1/dim_red/conv": {
+        "execution_index": 105,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 405,
+        "cpu_time": 405
+    },
+    "bottleneck4_7/add": {
+        "execution_index": 231,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_0/skip/pooling": {
+        "execution_index": 36,
+        "status": "EXECUTED",
+        "layer_type": "Pooling",
+        "exec_type": "jit_avx_FP32",
+        "real_time": 871,
+        "cpu_time": 871
+    },
+    "mbox_conf1/out/conv/perm": {
+        "execution_index": 264,
+        "status": "EXECUTED",
+        "layer_type": "Permute",
+        "exec_type": "unknown_FP32",
+        "real_time": 40,
+        "cpu_time": 40
+    },
+    "bottleneck4_11/inner/dw1/conv": {
+        "execution_index": 256,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 41,
+        "cpu_time": 41
+    },
+    "bottleneck4_1/dim_inc/conv": {
+        "execution_index": 188,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 339,
+        "cpu_time": 339
+    },
+    "bottleneck4_10/inner/dw1/fn": {
+        "execution_index": 250,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_8/dim_red/conv": {
+        "execution_index": 233,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 372,
+        "cpu_time": 372
+    },
+    "bottleneck4_1/add": {
+        "execution_index": 189,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_5/dim_red/fn": {
+        "execution_index": 134,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_9/dim_red/fn": {
+        "execution_index": 241,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_10/dim_red/conv": {
+        "execution_index": 168,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 406,
+        "cpu_time": 406
+    },
+    "bottleneck4_9/dim_inc/conv": {
+        "execution_index": 244,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 339,
+        "cpu_time": 339
+    },
+    "bottleneck3_2/dim_red/fn": {
+        "execution_index": 113,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_3/dim_red/fn": {
+        "execution_index": 199,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_3/add": {
+        "execution_index": 22,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_6/dim_red/fn": {
+        "execution_index": 141,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_1/inner/dw1/conv": {
+        "execution_index": 107,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 69,
+        "cpu_time": 69
+    },
+    "bottleneck2_3/inner/dw1/conv": {
+        "execution_index": 56,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 128,
+        "cpu_time": 128
+    },
+    "bottleneck3_1/dim_inc/conv": {
+        "execution_index": 109,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 382,
+        "cpu_time": 382
+    },
+    "bottleneck3_10/fn": {
+        "execution_index": 174,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_3/dim_inc/conv": {
+        "execution_index": 58,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 442,
+        "cpu_time": 442
+    },
+    "bottleneck2_6/inner/dw1/conv": {
+        "execution_index": 77,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 130,
+        "cpu_time": 130
+    },
+    "bottleneck4_6/fn": {
+        "execution_index": 225,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_2/add": {
+        "execution_index": 15,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_10/inner/dw1/conv": {
+        "execution_index": 249,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 41,
+        "cpu_time": 41
+    },
+    "bottleneck1_3/inner/dw1/conv": {
+        "execution_index": 19,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 262,
+        "cpu_time": 262
+    },
+    "bottleneck3_10/dim_inc/conv": {
+        "execution_index": 172,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 415,
+        "cpu_time": 415
+    },
+    "bottleneck3_1/fn": {
+        "execution_index": 111,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_4/dim_inc/conv": {
+        "execution_index": 209,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 347,
+        "cpu_time": 347
+    },
+    "bottleneck4_8/dim_red/fn": {
+        "execution_index": 234,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_3/inner/dw1/conv": {
+        "execution_index": 200,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 42,
+        "cpu_time": 42
+    },
+    "bottleneck1_1/inner/dw1/conv": {
+        "execution_index": 5,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 254,
+        "cpu_time": 254
+    },
+    "bottleneck2_8/dim_red/fn": {
+        "execution_index": 90,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_3/add": {
+        "execution_index": 124,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_3/fn": {
+        "execution_index": 23,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_10/dim_inc/conv": {
+        "execution_index": 251,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 339,
+        "cpu_time": 339
+    },
+    "bottleneck3_3/dim_red/conv": {
+        "execution_index": 119,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 404,
+        "cpu_time": 404
+    },
+    "bottleneck1_2/inner/dw1/fn": {
+        "execution_index": 13,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_5/add": {
+        "execution_index": 73,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "detection_out": {
+        "execution_index": 272,
+        "status": "EXECUTED",
+        "layer_type": "DetectionOutput",
+        "exec_type": "unknown_FP32",
+        "real_time": 551,
+        "cpu_time": 551
+    },
+    "bottleneck1_4/dim_red/fn": {
+        "execution_index": 25,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_0/skip/pooling": {
+        "execution_index": 180,
+        "status": "EXECUTED",
+        "layer_type": "Pooling",
+        "exec_type": "jit_avx_FP32",
+        "real_time": 231,
+        "cpu_time": 231
+    },
+    "bottleneck3_5/fn": {
+        "execution_index": 139,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_1/inner/dw1/fn": {
+        "execution_index": 43,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_6/inner/dw1/fn": {
+        "execution_index": 143,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_5/add": {
+        "execution_index": 217,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_5/dim_inc/conv": {
+        "execution_index": 72,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 441,
+        "cpu_time": 441
+    },
+    "bottleneck4_9/dim_red/conv": {
+        "execution_index": 240,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 366,
+        "cpu_time": 366
+    },
+    "bottleneck3_9/dim_red/conv": {
+        "execution_index": 161,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 401,
+        "cpu_time": 401
+    },
+    "bottleneck3_5/add": {
+        "execution_index": 138,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_3/fn": {
+        "execution_index": 60,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_1/dim_red/fn": {
+        "execution_index": 41,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_2/fn": {
+        "execution_index": 16,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_8/fn": {
+        "execution_index": 239,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_6/fn": {
+        "execution_index": 81,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_8/inner/dw1/conv": {
+        "execution_index": 91,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 127,
+        "cpu_time": 127
+    },
+    "bottleneck2_2/add": {
+        "execution_index": 52,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_4/fn": {
+        "execution_index": 30,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_0/dim_red/fn": {
+        "execution_index": 176,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_7/dim_inc/conv": {
+        "execution_index": 86,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 441,
+        "cpu_time": 441
+    },
+    "bottleneck3_8/inner/dw1/fn": {
+        "execution_index": 157,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_3/dim_inc/conv": {
+        "execution_index": 202,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 340,
+        "cpu_time": 340
+    },
+    "bottleneck4_9/inner/dw1/conv": {
+        "execution_index": 242,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 41,
+        "cpu_time": 41
+    },
+    "bottleneck2_1/dim_inc/conv": {
+        "execution_index": 44,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 443,
+        "cpu_time": 443
+    },
+    "bottleneck3_0/add": {
+        "execution_index": 103,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_0/dim_red/conv": {
+        "execution_index": 96,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 811,
+        "cpu_time": 811
+    },
+    "bottleneck1_1/add": {
+        "execution_index": 8,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_5/dim_inc/conv": {
+        "execution_index": 137,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 379,
+        "cpu_time": 379
+    },
+    "bottleneck2_4/dim_red/fn": {
+        "execution_index": 62,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_2/dim_red/fn": {
+        "execution_index": 11,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_6/dim_red/fn": {
+        "execution_index": 76,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_0/fn": {
+        "execution_index": 183,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_5/dim_inc/conv": {
+        "execution_index": 216,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 339,
+        "cpu_time": 339
+    },
+    "bottleneck3_7/dim_red/conv": {
+        "execution_index": 147,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 401,
+        "cpu_time": 401
+    },
+    "bottleneck4_6/dim_inc/conv": {
+        "execution_index": 223,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 337,
+        "cpu_time": 337
+    },
+    "bottleneck4_0/dim_red/conv": {
+        "execution_index": 175,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 683,
+        "cpu_time": 683
+    },
+    "bottleneck2_6/add": {
+        "execution_index": 80,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_4/add": {
+        "execution_index": 29,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "mbox_conf1/out/conv/flat/softmax/flat": {
+        "execution_index": 268,
+        "status": "NOT_RUN",
+        "layer_type": "Flatten",
+        "exec_type": "unknown_FP32",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_0/inner/dw1/conv": {
+        "execution_index": 98,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 101,
+        "cpu_time": 101
+    },
+    "bottleneck2_0/skip/conv": {
+        "execution_index": 37,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 774,
+        "cpu_time": 774
+    },
+    "bottleneck1_4/dim_inc/conv": {
+        "execution_index": 28,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 648,
+        "cpu_time": 648
+    },
+    "bottleneck4_9/add": {
+        "execution_index": 245,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_1/fn": {
+        "execution_index": 9,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_0/dim_red/fn": {
+        "execution_index": 97,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_8/inner/dw1/fn": {
+        "execution_index": 236,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_1/add": {
+        "execution_index": 110,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_5/dim_red/conv": {
+        "execution_index": 212,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 366,
+        "cpu_time": 366
+    },
+    "bottleneck2_5/dim_red/conv": {
+        "execution_index": 68,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 418,
+        "cpu_time": 418
+    },
+    "bottleneck2_7/inner/dw1/fn": {
+        "execution_index": 85,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_4/inner/dw1/conv": {
+        "execution_index": 63,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 127,
+        "cpu_time": 127
+    },
+    "bottleneck3_6/add": {
+        "execution_index": 145,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_5/fn": {
+        "execution_index": 218,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "Mul_12599/Fused_Mul_/FusedScaleShift_": {
+        "execution_index": 0,
+        "status": "EXECUTED",
+        "layer_type": "ScaleShift",
+        "exec_type": "jit_avx2_FP32",
+        "real_time": 364,
+        "cpu_time": 364
+    },
+    "bottleneck4_11/inner/dw1/fn": {
+        "execution_index": 257,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_0/skip/pooling": {
+        "execution_index": 101,
+        "status": "EXECUTED",
+        "layer_type": "Pooling",
+        "exec_type": "jit_avx_FP32",
+        "real_time": 429,
+        "cpu_time": 429
+    },
+    "bottleneck3_7/dim_red/fn": {
+        "execution_index": 148,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "mbox1/priorbox": {
+        "execution_index": 262,
+        "status": "NOT_RUN",
+        "layer_type": "PriorBoxClustered",
+        "exec_type": "unknown_FP32",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "init_block1/dim_inc/conv": {
+        "execution_index": 1,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_FP32",
+        "real_time": 1280,
+        "cpu_time": 1280
+    },
+    "bottleneck4_7/inner/dw1/conv": {
+        "execution_index": 228,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 40,
+        "cpu_time": 40
+    },
+    "bottleneck3_8/dim_red/fn": {
+        "execution_index": 155,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_7/fn": {
+        "execution_index": 232,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_7/inner/dw1/conv": {
+        "execution_index": 84,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 127,
+        "cpu_time": 127
+    },
+    "bottleneck2_0/fn": {
+        "execution_index": 39,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_11/add": {
+        "execution_index": 259,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_0/dim_inc/conv": {
+        "execution_index": 100,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 334,
+        "cpu_time": 334
+    },
+    "bottleneck4_4/dim_red/conv": {
+        "execution_index": 205,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 363,
+        "cpu_time": 363
+    },
+    "bottleneck3_8/dim_red/conv": {
+        "execution_index": 154,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 405,
+        "cpu_time": 405
+    },
+    "bottleneck4_7/inner/dw1/fn": {
+        "execution_index": 229,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_4/dim_inc/conv": {
+        "execution_index": 130,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 386,
+        "cpu_time": 386
+    },
+    "bottleneck3_8/add": {
+        "execution_index": 159,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_3/inner/dw1/fn": {
+        "execution_index": 122,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_1/fn": {
+        "execution_index": 46,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_7/dim_red/fn": {
+        "execution_index": 83,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_2/fn": {
+        "execution_index": 53,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_0/fn": {
+        "execution_index": 104,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_3/dim_red/conv": {
+        "execution_index": 17,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 727,
+        "cpu_time": 727
+    },
+    "bottleneck3_7/inner/dw1/fn": {
+        "execution_index": 150,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_7/add": {
+        "execution_index": 152,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_4/add": {
+        "execution_index": 131,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_4/dim_red/conv": {
+        "execution_index": 126,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 404,
+        "cpu_time": 404
+    },
+    "bottleneck4_11/dim_red/fn": {
+        "execution_index": 255,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_8/inner/dw1/conv": {
+        "execution_index": 235,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 40,
+        "cpu_time": 40
+    },
+    "mbox_loc1/out/conv/flat": {
+        "execution_index": 271,
+        "status": "NOT_RUN",
+        "layer_type": "Flatten",
+        "exec_type": "unknown_FP32",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "mbox_conf1/out/conv/flat/reshape": {
+        "execution_index": 266,
+        "status": "NOT_RUN",
+        "layer_type": "Reshape",
+        "exec_type": "unknown_FP32",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_3/dim_inc/conv": {
+        "execution_index": 123,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 383,
+        "cpu_time": 383
+    },
+    "bottleneck3_6/inner/dw1/conv": {
+        "execution_index": 142,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 97,
+        "cpu_time": 97
+    },
+    "bottleneck4_1/dim_red/fn": {
+        "execution_index": 185,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_0/dim_inc/conv": {
+        "execution_index": 35,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 377,
+        "cpu_time": 377
+    },
+    "bottleneck2_5/inner/dw1/fn": {
+        "execution_index": 71,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_3/inner/dw1/fn": {
+        "execution_index": 57,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_7/dim_inc/conv": {
+        "execution_index": 230,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 339,
+        "cpu_time": 339
+    },
+    "bottleneck3_1/inner/dw1/fn": {
+        "execution_index": 108,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_3/add": {
+        "execution_index": 203,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_8/inner/dw1/conv": {
+        "execution_index": 156,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 69,
+        "cpu_time": 69
+    },
+    "bottleneck4_0/inner/dw1/conv": {
+        "execution_index": 177,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 60,
+        "cpu_time": 60
+    },
+    "bottleneck2_7/add": {
+        "execution_index": 87,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_1/inner/dw1/conv": {
+        "execution_index": 42,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 132,
+        "cpu_time": 132
+    },
+    "bottleneck2_8/add": {
+        "execution_index": 94,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_5/inner/dw1/fn": {
+        "execution_index": 215,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_2/inner/dw1/fn": {
+        "execution_index": 50,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_1/dim_red/fn": {
+        "execution_index": 106,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_4/dim_inc/conv": {
+        "execution_index": 65,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 481,
+        "cpu_time": 481
+    },
+    "bottleneck3_8/dim_inc/conv": {
+        "execution_index": 158,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 380,
+        "cpu_time": 380
+    },
+    "bottleneck2_4/fn": {
+        "execution_index": 67,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_4/add": {
+        "execution_index": 66,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_3/inner/dw1/fn": {
+        "execution_index": 201,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "mbox_conf1/out/conv": {
+        "execution_index": 263,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_FP32",
+        "real_time": 1200,
+        "cpu_time": 1200
+    },
+    "bottleneck2_3/dim_red/fn": {
+        "execution_index": 55,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_4/inner/dw1/conv": {
+        "execution_index": 207,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 40,
+        "cpu_time": 40
+    },
+    "bottleneck4_0/add": {
+        "execution_index": 182,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_1/dim_inc/conv": {
+        "execution_index": 7,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 656,
+        "cpu_time": 656
+    },
+    "bottleneck4_5/inner/dw1/conv": {
+        "execution_index": 214,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 40,
+        "cpu_time": 40
+    },
+    "bottleneck3_7/fn": {
+        "execution_index": 153,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_9/fn": {
+        "execution_index": 246,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_6/inner/dw1/fn": {
+        "execution_index": 222,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_2/fn": {
+        "execution_index": 197,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_2/dim_red/conv": {
+        "execution_index": 191,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 363,
+        "cpu_time": 363
+    },
+    "bottleneck2_2/dim_inc/conv": {
+        "execution_index": 51,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 442,
+        "cpu_time": 442
+    },
+    "bottleneck2_8/fn": {
+        "execution_index": 95,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_8/inner/dw1/fn": {
+        "execution_index": 92,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "mbox_conf1/out/conv/flat/softmax": {
+        "execution_index": 267,
+        "status": "EXECUTED",
+        "layer_type": "SoftMax",
+        "exec_type": "ref_any_FP32",
+        "real_time": 501,
+        "cpu_time": 501
+    },
+    "bottleneck3_6/dim_inc/conv": {
+        "execution_index": 144,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 381,
+        "cpu_time": 381
+    },
+    "bottleneck4_1/inner/dw1/fn": {
+        "execution_index": 187,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_2/fn": {
+        "execution_index": 118,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_3/fn": {
+        "execution_index": 125,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_6/inner/dw1/fn": {
+        "execution_index": 78,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_2/inner/dw1/fn": {
+        "execution_index": 194,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_6/dim_red/conv": {
+        "execution_index": 75,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 416,
+        "cpu_time": 416
+    },
+    "bottleneck4_0/dim_inc/conv": {
+        "execution_index": 179,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 322,
+        "cpu_time": 322
+    },
+    "bottleneck3_5/dim_red/conv": {
+        "execution_index": 133,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 404,
+        "cpu_time": 404
+    },
+    "bottleneck2_0/inner/dw1/fn": {
+        "execution_index": 34,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_8/dim_red/conv": {
+        "execution_index": 89,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 416,
+        "cpu_time": 416
+    },
+    "bottleneck3_7/inner/dw1/conv": {
+        "execution_index": 149,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 69,
+        "cpu_time": 69
+    },
+    "bottleneck1_1/dim_red/fn": {
+        "execution_index": 4,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_11/dim_red/conv": {
+        "execution_index": 254,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 364,
+        "cpu_time": 364
+    },
+    "bottleneck4_10/fn": {
+        "execution_index": 253,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_3/inner/dw1/fn": {
+        "execution_index": 20,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_0/add": {
+        "execution_index": 38,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_6/dim_red/fn": {
+        "execution_index": 220,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_1/dim_red/conv": {
+        "execution_index": 3,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 737,
+        "cpu_time": 737
+    },
+    "bottleneck4_4/add": {
+        "execution_index": 210,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_1/inner/dw1/fn": {
+        "execution_index": 6,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_9/dim_inc/conv": {
+        "execution_index": 165,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 385,
+        "cpu_time": 385
+    },
+    "bottleneck2_4/inner/dw1/fn": {
+        "execution_index": 64,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_2/dim_red/conv": {
+        "execution_index": 10,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 726,
+        "cpu_time": 726
+    },
+    "bottleneck4_2/add": {
+        "execution_index": 196,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_10/inner/dw1/conv": {
+        "execution_index": 170,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 69,
+        "cpu_time": 69
+    },
+    "bottleneck3_2/dim_red/conv": {
+        "execution_index": 112,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 471,
+        "cpu_time": 471
+    },
+    "bottleneck3_4/inner/dw1/conv": {
+        "execution_index": 128,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 69,
+        "cpu_time": 69
+    },
+    "bottleneck3_9/fn": {
+        "execution_index": 167,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_6/inner/dw1/conv": {
+        "execution_index": 221,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 40,
+        "cpu_time": 40
+    },
+    "bottleneck2_7/dim_red/conv": {
+        "execution_index": 82,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 415,
+        "cpu_time": 415
+    },
+    "mbox_loc1/out/conv": {
+        "execution_index": 269,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_FP32",
+        "real_time": 2453,
+        "cpu_time": 2453
+    },
+    "bottleneck2_5/dim_red/fn": {
+        "execution_index": 69,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_4/fn": {
+        "execution_index": 132,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_2/add": {
+        "execution_index": 117,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_3/dim_red/conv": {
+        "execution_index": 198,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 378,
+        "cpu_time": 378
+    },
+    "bottleneck3_3/inner/dw1/conv": {
+        "execution_index": 121,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 69,
+        "cpu_time": 69
+    },
+    "bottleneck1_3/dim_inc/conv": {
+        "execution_index": 21,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 656,
+        "cpu_time": 656
+    },
+    "bottleneck4_3/fn": {
+        "execution_index": 204,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_8/add": {
+        "execution_index": 238,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_6/dim_red/conv": {
+        "execution_index": 219,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 364,
+        "cpu_time": 364
+    },
+    "bottleneck3_9/dim_red/fn": {
+        "execution_index": 162,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_1/add": {
+        "execution_index": 45,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_5/inner/dw1/conv": {
+        "execution_index": 135,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 70,
+        "cpu_time": 70
+    },
+    "bottleneck2_4/dim_red/conv": {
+        "execution_index": 61,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 415,
+        "cpu_time": 415
+    },
+    "bottleneck4_2/dim_inc/conv": {
+        "execution_index": 195,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 339,
+        "cpu_time": 339
+    },
+    "bottleneck4_10/dim_red/fn": {
+        "execution_index": 248,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_7/dim_inc/conv": {
+        "execution_index": 151,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 379,
+        "cpu_time": 379
+    },
+    "bottleneck4_2/inner/dw1/conv": {
+        "execution_index": 193,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 40,
+        "cpu_time": 40
+    },
+    "bottleneck1_4/inner/dw1/conv": {
+        "execution_index": 26,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 253,
+        "cpu_time": 253
+    },
+    "bottleneck3_2/inner/dw1/fn": {
+        "execution_index": 115,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_3/add": {
+        "execution_index": 59,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_4/dim_red/fn": {
+        "execution_index": 206,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_10/add": {
+        "execution_index": 252,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_4/inner/dw1/fn": {
+        "execution_index": 27,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_9/inner/dw1/conv": {
+        "execution_index": 163,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 69,
+        "cpu_time": 69
+    },
+    "bottleneck4_10/dim_red/conv": {
+        "execution_index": 247,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 379,
+        "cpu_time": 379
+    },
+    "bottleneck2_2/dim_red/fn": {
+        "execution_index": 48,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_11/dim_inc/conv_nChw8c_nchw_mbox1/priorbox": {
+        "execution_index": 261,
+        "status": "NOT_RUN",
+        "layer_type": "Reorder",
+        "exec_type": "jit_uni_FP32",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_9/add": {
+        "execution_index": 166,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "init_block1/dim_inc/fn": {
+        "execution_index": 2,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_2/inner/dw1/conv": {
+        "execution_index": 114,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 70,
+        "cpu_time": 70
+    },
+    "bottleneck2_7/fn": {
+        "execution_index": 88,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_4/dim_red/fn": {
+        "execution_index": 127,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_3/dim_red/fn": {
+        "execution_index": 18,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_3/dim_red/fn": {
+        "execution_index": 120,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_6/fn": {
+        "execution_index": 146,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_10/inner/dw1/fn": {
+        "execution_index": 171,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_2/dim_inc/conv": {
+        "execution_index": 14,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 649,
+        "cpu_time": 649
+    },
+    "bottleneck4_4/fn": {
+        "execution_index": 211,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_0/inner/dw1/fn": {
+        "execution_index": 178,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_2/dim_red/fn": {
+        "execution_index": 192,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_1/dim_red/conv": {
+        "execution_index": 40,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 459,
+        "cpu_time": 459
+    },
+    "bottleneck4_9/inner/dw1/fn": {
+        "execution_index": 243,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_3/dim_red/conv": {
+        "execution_index": 54,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 416,
+        "cpu_time": 416
+    },
+    "bottleneck2_6/dim_inc/conv": {
+        "execution_index": 79,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 441,
+        "cpu_time": 441
+    },
+    "bottleneck3_10/add": {
+        "execution_index": 173,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_8/fn": {
+        "execution_index": 160,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_9/inner/dw1/fn": {
+        "execution_index": 164,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_2/inner/dw1/conv": {
+        "execution_index": 49,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 128,
+        "cpu_time": 128
+    },
+    "bottleneck3_6/dim_red/conv": {
+        "execution_index": 140,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 445,
+        "cpu_time": 445
+    },
+    "bottleneck3_0/inner/dw1/fn": {
+        "execution_index": 99,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_0/dim_red/fn": {
+        "execution_index": 32,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_11/dim_inc/conv": {
+        "execution_index": 258,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 340,
+        "cpu_time": 340
+    },
+    "bottleneck4_0/skip/conv": {
+        "execution_index": 181,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 763,
+        "cpu_time": 763
+    },
+    "bottleneck2_0/dim_red/conv": {
+        "execution_index": 31,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 893,
+        "cpu_time": 893
+    },
+    "bottleneck4_1/dim_red/conv": {
+        "execution_index": 184,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 364,
+        "cpu_time": 364
+    },
+    "mbox_loc1/out/conv/perm": {
+        "execution_index": 270,
+        "status": "EXECUTED",
+        "layer_type": "Permute",
+        "exec_type": "unknown_FP32",
+        "real_time": 50,
+        "cpu_time": 50
+    },
+    "bottleneck3_5/inner/dw1/fn": {
+        "execution_index": 136,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_0/inner/dw1/conv": {
+        "execution_index": 33,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 215,
+        "cpu_time": 215
+    },
+    "bottleneck1_2/inner/dw1/conv": {
+        "execution_index": 12,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 253,
+        "cpu_time": 253
+    },
+    "bottleneck2_5/fn": {
+        "execution_index": 74,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_2/dim_red/conv": {
+        "execution_index": 47,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 417,
+        "cpu_time": 417
+    },
+    "bottleneck3_4/inner/dw1/fn": {
+        "execution_index": 129,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "mbox_conf1/out/conv/flat": {
+        "execution_index": 265,
+        "status": "NOT_RUN",
+        "layer_type": "Flatten",
+        "exec_type": "unknown_FP32",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_1/inner/dw1/conv": {
+        "execution_index": 186,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 42,
+        "cpu_time": 42
+    },
+    "bottleneck3_10/dim_red/fn": {
+        "execution_index": 169,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_1/fn": {
+        "execution_index": 190,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_6/add": {
+        "execution_index": 224,
+        "status": "NOT_RUN",
+        "layer_type": "Eltwise",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck2_5/inner/dw1/conv": {
+        "execution_index": 70,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_dw_FP32",
+        "real_time": 130,
+        "cpu_time": 130
+    },
+    "bottleneck3_2/dim_inc/conv": {
+        "execution_index": 116,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 380,
+        "cpu_time": 380
+    },
+    "bottleneck4_7/dim_red/conv": {
+        "execution_index": 226,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 372,
+        "cpu_time": 372
+    },
+    "bottleneck4_4/inner/dw1/fn": {
+        "execution_index": 208,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck1_4/dim_red/conv": {
+        "execution_index": 24,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 719,
+        "cpu_time": 719
+    },
+    "bottleneck2_8/dim_inc/conv": {
+        "execution_index": 93,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 476,
+        "cpu_time": 476
+    },
+    "bottleneck4_7/dim_red/fn": {
+        "execution_index": 227,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "out_detection_out": {
+        "execution_index": 273,
+        "status": "NOT_RUN",
+        "layer_type": "Output",
+        "exec_type": "unknown_FP32",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_11/fn": {
+        "execution_index": 260,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck4_5/dim_red/fn": {
+        "execution_index": 213,
+        "status": "NOT_RUN",
+        "layer_type": "ReLU",
+        "exec_type": "undef",
+        "real_time": 0,
+        "cpu_time": 0
+    },
+    "bottleneck3_0/skip/conv": {
+        "execution_index": 102,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 693,
+        "cpu_time": 693
+    },
+    "bottleneck4_8/dim_inc/conv": {
+        "execution_index": 237,
+        "status": "EXECUTED",
+        "layer_type": "Convolution",
+        "exec_type": "jit_avx2_1x1_FP32",
+        "real_time": 348,
+        "cpu_time": 348
+    }
+}
