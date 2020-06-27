@@ -133,7 +133,7 @@ I have added the Vtune project, for you to view the stats.
 ![elapsed_time](./images/elapsed_time.png)
 
 ### Effective CPU Utilization
-![cpu_utilization](./images/effective cpu utilization.png)
+![cpu_utilization](./images/effective_cpu_utilization.png)
 
 ### Top Hotspots
 ![hotspot](./images/top_hotspots.png)
