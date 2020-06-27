@@ -298,7 +298,6 @@ def main():
     # Connect to the MQTT server
     client = connect_mqtt()
     # Perform inference on the input stream
-    # client = None
     infer_on_stream(args, client)
 
 
