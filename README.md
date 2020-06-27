@@ -8,7 +8,9 @@
 
 ## What it Does
 
-The people counter application will demonstrate how to create a smart video IoT solution using Intel® hardware and software tools. The app will detect people in a designated area, providing the number of people in the frame, average duration of people in frame, and total count.
+This application is intended to provide a mechanism by which number of people entering into a particular sceene can be counted, and also their average duartion, i.e. the average time every person spent in a particluar scene can also be shown. 
+
+Based on the above two parameters, we can also calculate the tolal number of people that have come into a particular from the starting of time.
 
 ## How it Works
 
@@ -87,98 +89,7 @@ From the main directory:
    npm install
    ```
 
-## What model to use
-
-In this I have used  Intel® OpenVINO's [Pedestrian Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_person_detection_retail_0013_description_person_detection_retail_0013.html). The legal model name is "person-detection-retail-0013". 
-
-### To Download the model, I used the following command
-```sh
-  cd /opt/intel/openvino/development_tool/tools/model_downloader/
-  sudo ./downloader.py --name person-detection-retail-0013
-```
-
-## TensorFlow Object Detection Model Zoo
-
-TensorFlow Object Detection Model Zoo (https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) contains many pre-trained models on the coco dataset. Ssd_inception_v2_coco and faster_rcnn_inception_v2_coco performed good as compared to rest of the models, but, in this project, faster_rcnn_inception_v2_coco is used which is fast in detecting people with less errors. Intel openVINO already contains extensions for custom layers used in TensorFlow Object Detection Model Zoo.
-
-## Before choosing Intel® OpenVINO's pre-trained model, i tried the following models. 
-
-### 1. SSD Mobilenet V1 COCO
-
-Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
-
-```
-wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz
-```
-Extracting the tar.gz file by the following command:
-
-```
-tar -xvf ssd_mobilenet_v1_coco_2018_01_28.tar.gz
-```
-Changing the directory to the extracted folder of the downloaded model:
-
-```
-cd ssd_mobilenet_v1_coco_2018_01_28
-```
-Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
-
-```
-python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_mobilenet_v1_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_support.json
-```
-
-### 2. SSD Mobilenet V2 COCO
-
-Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
-
-```
-wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz
-```
-Extracting the tar.gz file by the following command:
-
-```
-tar -xvf ssd_mobilenet_v2_coco_2018_03_29.tar.gz
-```
-Changing the directory to the extracted folder of the downloaded model:
-
-```
-cd ssd_mobilenet_v2_coco_2018_03_29
-```
-Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
-
-```
-python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
-```
-
-### 3. Faster RCNN Inception V2 COCO
-
-Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
-
-```
-wget http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
-```
-Extracting the tar.gz file by the following command:
-
-```
-tar -xvf faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
-```
-Changing the directory to the extracted folder of the downloaded model:
-
-```
-cd faster_rcnn_inception_v2_coco_2018_01_28
-```
-Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
-
-```
-python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json
-```
-
-## Model Comparison
-
-| Model Name                    |   Speed (ms)  | 	COCO mAP[^1] | Size (MB) |
-|-------------------------------|---------------|----------------|-----------|
-| ssd_mobilenet_v1_coco         |     30        |       21       |    86     |
-| ssd_mobilenet_v2_coco         |     31        |       22       |   201     |
-| faster_rcnn_inception_v2_coco |     58        |       28       |   167     |
+# What model to use
 
 ## Run the application
 

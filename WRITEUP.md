@@ -1,38 +1,74 @@
-# Deploying a People Counter Application at the Edge
+# Comparing model performance
 
-The people counter application demonstrates how to create a smart video IoT solution using Intel® hardware and software tools. The app will detect people in a designated area, providing the number of people in the frame, average duration of people in frame, and total count. This project is a part of Intel Edge AI for IOT Developers Nanodegree program by udacity.
+## Model research
 
-![screenshot_1](https://github.com/sambhav228/People_Counter_App_Using_Intel_OpenVINO_Toolkit/blob/master/images/1.jpg)
+In this I have used  Intel® OpenVINO's [Pedestrian Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_person_detection_retail_0013_description_person_detection_retail_0013.html). The legal model name is "person-detection-retail-0013". 
 
+### To Download the model, I used the following command
+```sh
+  cd /opt/intel/openvino/development_tool/tools/model_downloader/
+  sudo ./downloader.py --name person-detection-retail-0013
+```
 
-### How it works?
+## TensorFlow Object Detection Model Zoo
 
-The counter will use the Inference Engine included in the Intel® Distribution of OpenVINO™ Toolkit. The model used should be able to identify people in a video frame. The application should count the number of people in the current frame, the duration that a person is in the frame (time elapsed between entering and exiting a frame) and the total count of people. It then sends the data to a local web server using the Paho MQTT Python package.
-
-
-![architectural diagram](./images/arch_diagram.png)
-
-
-## Requirements
-
-#### Hardware
-
-* 6th to 10th generation Intel® Core™ processor with Iris® Pro graphics or Intel® HD Graphics.
-* OR use of Intel® Neural Compute Stick 2 (NCS2)
-
-#### Software
-
-*   Intel® Distribution of OpenVINO™ toolkit 2019 R3 release
-*   Node v6.17.1
-*   Npm v3.10.10
-*   CMake
-*   MQTT Mosca server
-*   Python 3.5 or 3.6
-  
-  
-### Explaining Model Selection & Custom Layers
- 
 TensorFlow Object Detection Model Zoo (https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) contains many pre-trained models on the coco dataset. Ssd_inception_v2_coco and faster_rcnn_inception_v2_coco performed good as compared to rest of the models, but, in this project, faster_rcnn_inception_v2_coco is used which is fast in detecting people with less errors. Intel openVINO already contains extensions for custom layers used in TensorFlow Object Detection Model Zoo.
+
+## Before choosing Intel® OpenVINO's pre-trained model, i tried the following models. 
+
+### 1. SSD Mobilenet V1 COCO
+
+The reason of not using this model is that it leaves a lot of frames while detecting, although the size of model is not that large.
+
+Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
+
+```
+wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz
+```
+Extracting the tar.gz file by the following command:
+
+```
+tar -xvf ssd_mobilenet_v1_coco_2018_01_28.tar.gz
+```
+Changing the directory to the extracted folder of the downloaded model:
+
+```
+cd ssd_mobilenet_v1_coco_2018_01_28
+```
+Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
+
+```
+python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_mobilenet_v1_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_support.json
+```
+
+### 2. SSD Mobilenet V2 COCO
+
+This version of SSD model improved, as it detected greater frames than SSD V1, but then also a lot of valid frame were not detected, and also its size is also that huge, hence it can be used on edge devices.
+
+Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
+
+```
+wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz
+```
+Extracting the tar.gz file by the following command:
+
+```
+tar -xvf ssd_mobilenet_v2_coco_2018_03_29.tar.gz
+```
+Changing the directory to the extracted folder of the downloaded model:
+
+```
+cd ssd_mobilenet_v2_coco_2018_03_29
+```
+Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
+
+```
+python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
+```
+
+### 3. Faster RCNN Inception V2 COCO
+
+The reason of not using this model is that although it was able to improve on both the ealier models, but the size of this model big, so it made my application slow, and also not every edge device will be able to run a big model.
 
 Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
 
@@ -49,111 +85,55 @@ Changing the directory to the extracted folder of the downloaded model:
 ```
 cd faster_rcnn_inception_v2_coco_2018_01_28
 ```
-The model can't be the existing models provided by Intel. So, converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
+Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
 
 ```
 python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json
 ```
 
-### Comparing Model Performance
+# Explaining Custom Layers
 
-Model-1: Ssd_inception_v2_coco_2018_01_28
+Custom layers handling is very important as the device that we would be using will not be able to process each and every layer.
 
-Converted the model to intermediate representation using the following command. Further, this model lacked accuracy as it didn't detect people correctly in the video. Made some alterations to the threshold for increasing its accuracy but the results were not fruitful.
-```
-python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_inception_v2_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
-```
-
-Model-2: Faster_rcnn_inception_v2_coco_2018_01_28
-
-Converted the model to intermediate representation using the following command. Model -2 i.e. Faster_rcnn_inception_v2_coco, performed really well in the output video. After using a threshold of 0.4, the model works better than all the previous approaches.
-```
-python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json
-```
-##### Comparison
-
-Comparing the two models i.e. ssd_inception_v2_coco and faster_rcnn_inception_v2_coco in terms of latency and memory, several insights were drawn. It could be clearly seen that the Latency (microseconds) and Memory (Mb) decreases in case of OpenVINO as compared to plain Tensorflow model which is very useful in case of OpenVINO applications.
-
-| Model/Framework                             | Latency (microseconds)            | Memory (Mb) |
-| -----------------------------------         |:---------------------------------:| -------:|
-| ssd_inception_v2_coco (plain TF)            | 222                               | 538    |
-| ssd_inception_v2_coco (OpenVINO)            | 155                               | 329    |
-| faster_rcnn_inception_v2_coco (plain TF)    | 1281                              | 562    |
-| faster_rcnn_inception_v2_coco (OpenVINO)    | 889                               | 281    |
-
-##### Differences in Edge and Cloud computing
-
-Edge Computing is regarded as ideal for operations with extreme latency concerns. Thus, medium scale companies that have budget limitations can use edge computing to save financial resources. Cloud Computing is more suitable for projects and organizations which deal with massive data storage. 
-
-### Model Use Cases
-
-This application could keep a check on the number of people in a particular area and could be helpful where there is restriction on the number of people present in a particular area. Further, with some updations, this could also prove helpful in the current COVID-19 scenario i.e. to keep a check on the number of people in the frame.
-
-### Effects on End user needs
-
-Various insights could be drawn on the model by testing it with different videos and analyzing the model performance on low light input videos. This would be an important factor in determining the best model for the given scenario.
-
-### Running the Main Application
-
-After converting the downloaded model to the OpenVINO IR, all the three servers can be started on separate terminals i.e. 
-
--   MQTT Mosca server 
--   Node.js* Web server
--   FFmpeg server
+CPU processed almost all custom layers, but that is not the case in terms of GPU, TPU or VPU.
 
 
-#### Setting up the environment
+# Assess Model Use Cases
 
-Configuring the environment to use the Intel® Distribution of OpenVINO™ toolkit one time per session by running the following command:
-```
-source /opt/intel/openvino/bin/setupvars.sh -pyver 3.5
-```
+I think this app can find its usage in Retail Scenarios, Manufacturing Scenarios and Transport Scenarios as discussed in the project "Smart Queueing System".
 
-Further, from the main directory:
+Other used could be that i can be used to count the number of people crossing a given point. 
 
-#### Step 1 - Start the Mosca server
+Or how many people are visiting a particular counter in a mall
 
-```
-cd webservice/server/node-server
-node ./server.js
-```
+# Assess Effects on End User Needs
 
-The following message is displayed, if successful:
-```
-Mosca server started.
-```
+Lighting, model accuracy, and camera focal length/image size have different effects on a deployed edge model. The potential effects of each of these are as follows...
+1. Lighting can cause the model to miss a person.
+2. Low Model accuracy will cause make a model either mis-classify or even to miss detecting a person.
+3. Camera lengh/image size, can highly affect having a very large frame/image size will cause the model to get struct a point, or may cause the application to close.
+4. Another is camera angle, it is important as if camera is not adjusted properly, it may be possible that bounding boxes could not be drawn properly.
 
-#### Step 2 - Start the GUI
+## Model Comparison
 
-Opening new terminal and executing below commands:
-```
-cd webservice/ui
-npm run dev
-```
+| Model Name                    |   Speed (ms)  | 	COCO mAP[^1] | Size (MB) |
+|-------------------------------|---------------|----------------|-----------|
+| ssd_mobilenet_v1_coco         |     30        |       21       |    86     |
+| ssd_mobilenet_v2_coco         |     31        |       22       |   201     |
+| faster_rcnn_inception_v2_coco |     58        |       28       |   167     |
 
-The following message is displayed, if successful:
-```
-webpack: Compiled successfully
-```
 
-#### Step 3 - FFmpeg Server
+## App Stats
 
-Opening new terminal and executing below command:
-```
-sudo ffserver -f ./ffmpeg/server.conf
-```
+The following statstics has been obtained through the use of Intel Vtune Profiler.
 
-#### Step 4 - Run the code
+I have added the Vtune project, for you to view the stats.
 
-Opening new terminal and executing below command:
-```
-python main.py -i resources/Pedestrian_Detect_2_1_1.mp4 -m faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.4 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
-```
+### Elapsed Time
+![elapsed_time](./images/elapsed_time.png)
 
-### Screenshots:
+### Effective CPU Utilization
+![cpu_utilization](./images/effective cpu utilization.png)
 
-![Screenshot from 2020-05-02 11-50-23](https://github.com/sambhav228/People_Counter_App_Using_Intel_OpenVINO_Toolkit/blob/master/images/1.jpg)
-![Screenshot from 2020-05-02 11-52-21](https://github.com/sambhav228/People_Counter_App_Using_Intel_OpenVINO_Toolkit/blob/master/images/2.jpg)
-![Screenshot from 2020-05-02 11-53-29](https://github.com/sambhav228/People_Counter_App_Using_Intel_OpenVINO_Toolkit/blob/master/images/3.jpg)
-![Screenshot from 2020-05-02 11-55-17](https://github.com/sambhav228/People_Counter_App_Using_Intel_OpenVINO_Toolkit/blob/master/images/4.jpg)
-![Screenshot from 2020-05-02 11-58-38](https://github.com/sambhav228/People_Counter_App_Using_Intel_OpenVINO_Toolkit/blob/master/images/5.jpg)
+### Top Hotspots
+![hotspot](./images/top_hotspots.png)
