@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <rdmgr>
+  <timestamp type="u64_t">1593251538</timestamp>
+  <hostname type="string">rohit-VirtualBox</hostname>
+  <os type="string">linux</os>
+  <product type="string">Intel® VTune™ Profiler 2020 Update 1</product>
+  <buildNumber type="s32_t">607630</buildNumber>
+  <logicalCPUCount type="s32_t">1</logicalCPUCount>
+  <physicalCoreCount type="s32_t">1</physicalCoreCount>
+  <processorPackageCount type="s32_t">1</processorPackageCount>
+  <CPUFrequency type="s64_t">2400000000</CPUFrequency>
+  <CPUFamily type="s32_t">6</CPUFamily>
+  <CPUModel type="s32_t">142</CPUModel>
+  <CPUStepping type="s32_t">9</CPUStepping>
+  <CPUBrandName type="string">Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz</CPUBrandName>
+  <isa type="string">avx2</isa>
+  <collectionTimeBegin type="u64_t">1593251538</collectionTimeBegin>
+  <collectionTimeEnd type="u64_t">1593251546</collectionTimeEnd>
+  <variables>
+   <at type="string">hs</at>
+  </variables>
+ </rdmgr>
+</root>
