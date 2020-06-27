@@ -18,6 +18,10 @@ You will choose a model to use and convert it with the Model Optimizer.
 
 ![architectural diagram](./images/arch_diagram.png)
 
+## Added Feature
+
+I have used OpenVINO API's get_perf_count() to generate the per layer CPU execution time, and the result will be saved into a file names "model.json".
+
 ## Requirements
 
 ### Hardware
@@ -85,11 +89,96 @@ From the main directory:
 
 ## What model to use
 
-It is up to you to decide on what model to use for the application. You need to find a model not already converted to Intermediate Representation format (i.e. not one of the Intel® Pre-Trained Models), convert it, and utilize the converted model in your application.
+In this I have used  Intel® OpenVINO's [Pedestrian Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_person_detection_retail_0013_description_person_detection_retail_0013.html). The legal model name is "person-detection-retail-0013". 
 
-Note that you may need to do additional processing of the output to handle incorrect detections, such as adjusting confidence threshold or accounting for 1-2 frames where the model fails to see a person already counted and would otherwise double count.
+### To Download the model, I used the following command
+```sh
+  cd /opt/intel/openvino/development_tool/tools/model_downloader/
+  sudo ./downloader.py --name person-detection-retail-0013
+```
 
-**If you are otherwise unable to find a suitable model after attempting and successfully converting at least three other models**, you can document in your write-up what the models were, how you converted them, and why they failed, and then utilize any of the Intel® Pre-Trained Models that may perform better.
+## TensorFlow Object Detection Model Zoo
+
+TensorFlow Object Detection Model Zoo (https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) contains many pre-trained models on the coco dataset. Ssd_inception_v2_coco and faster_rcnn_inception_v2_coco performed good as compared to rest of the models, but, in this project, faster_rcnn_inception_v2_coco is used which is fast in detecting people with less errors. Intel openVINO already contains extensions for custom layers used in TensorFlow Object Detection Model Zoo.
+
+## Before choosing Intel® OpenVINO's pre-trained model, i tried the following models. 
+
+### 1. SSD Mobilenet V1 COCO
+
+Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
+
+```
+wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz
+```
+Extracting the tar.gz file by the following command:
+
+```
+tar -xvf ssd_mobilenet_v1_coco_2018_01_28.tar.gz
+```
+Changing the directory to the extracted folder of the downloaded model:
+
+```
+cd ssd_mobilenet_v1_coco_2018_01_28
+```
+Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
+
+```
+python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_mobilenet_v1_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_support.json
+```
+
+### 2. SSD Mobilenet V2 COCO
+
+Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
+
+```
+wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz
+```
+Extracting the tar.gz file by the following command:
+
+```
+tar -xvf ssd_mobilenet_v2_coco_2018_03_29.tar.gz
+```
+Changing the directory to the extracted folder of the downloaded model:
+
+```
+cd ssd_mobilenet_v2_coco_2018_03_29
+```
+Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
+
+```
+python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
+```
+
+### 3. Faster RCNN Inception V2 COCO
+
+Downloading the model from the GitHub repository of Tensorflow Object Detection Model Zoo by the following command:
+
+```
+wget http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
+```
+Extracting the tar.gz file by the following command:
+
+```
+tar -xvf faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
+```
+Changing the directory to the extracted folder of the downloaded model:
+
+```
+cd faster_rcnn_inception_v2_coco_2018_01_28
+```
+Converting the TensorFlow model to Intermediate Representation (IR) or OpenVINO IR format. The command used is given below:
+
+```
+python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json
+```
+
+## Model Comparison
+
+| Model Name                    |   Speed (ms)  | 	COCO mAP[^1] | Size (MB) |
+|-------------------------------|---------------|----------------|-----------|
+| ssd_mobilenet_v1_coco         |     30        |       21       |    86     |
+| ssd_mobilenet_v2_coco         |     31        |       22       |   201     |
+| faster_rcnn_inception_v2_coco |     58        |       28       |   167     |
 
 ## Run the application
 
@@ -153,7 +242,7 @@ When running Intel® Distribution of OpenVINO™ toolkit Python applications on 
 Though by default application runs on CPU, this can also be explicitly specified by ```-d CPU``` command-line argument:
 
 ```
-python main.py -i resources/Pedestrian_Detect_2_1_1.mp4 -m your-model.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
+python main.py -i resources/Pedestrian_Detect_2_1_1.mp4 -m resources/person-detection-retail-0013.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
 ```
 If you are in the classroom workspace, use the “Open App” button to view the output. If working locally, to see the output on a web based interface, open the link [http://0.0.0.0:3004](http://0.0.0.0:3004/) in a browser.
 
@@ -162,7 +251,7 @@ If you are in the classroom workspace, use the “Open App” button to view the
 To run on the Intel® Neural Compute Stick, use the ```-d MYRIAD``` command-line argument:
 
 ```
-python3.5 main.py -d MYRIAD -i resources/Pedestrian_Detect_2_1_1.mp4 -m your-model.xml -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
+python3.5 main.py -d MYRIAD -i resources/Pedestrian_Detect_2_1_1.mp4 -m resources/person-detection-retail-0013.xml -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
 ```
 
 To see the output on a web based interface, open the link [http://0.0.0.0:3004](http://0.0.0.0:3004/) in a browser.
@@ -175,7 +264,7 @@ To get the input video from the camera, use the `-i CAM` command-line argument. 
 
 For example:
 ```
-python main.py -i CAM -m your-model.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
+python main.py -i CAM -m resources/person-detection-retail-0013.xml -l /opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so -d CPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framerate 24 -i - http://0.0.0.0:3004/fac.ffm
 ```
 
 To see the output on a web based interface, open the link [http://0.0.0.0:3004](http://0.0.0.0:3004/) in a browser.
@@ -200,3 +289,9 @@ CAMERA_FEED_SERVER: "http://localhost:3004"
 ...
 MQTT_SERVER: "ws://localhost:3002"
 ```
+
+### Screenshots:
+
+![Image1](https://github.com/Rohit-Gupta-IIC/People-Counter-OpenVino/blob/master/images/image1.png)
+![Image2](https://github.com/Rohit-Gupta-IIC/People-Counter-OpenVino/blob/master/images/image2.png)
+![Image3](https://github.com/Rohit-Gupta-IIC/People-Counter-OpenVino/blob/master/images/image3.png)
