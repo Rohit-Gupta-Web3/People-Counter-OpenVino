@@ -123,11 +123,9 @@ def draw_outputs(coords, frame, initial_w, initial_h, x, k, prob_threshold):
             ymin = int(obj[4] * initial_h)
             xmax = int(obj[5] * initial_w)
             ymax = int(obj[6] * initial_h)
-            cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255), 1)
+
             current_count = current_count + 1
 
-            x = int((xmin + xmax) / 2)
-            y = int((ymax + ymin) / 2)
             cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255), 3)
             x = int((xmin + xmax) / 2)
             y = int((ymax + ymin) / 2)
@@ -141,13 +139,14 @@ def draw_outputs(coords, frame, initial_w, initial_h, x, k, prob_threshold):
                     (100, 100, 255),
                     1,
                 )
+                # to draw the arrow
                 cv2.arrowedLine(frame, (160, 50), (x, y), (255, 0, 255), 3)
                 c_x = frame.shape[1] / 2
                 c_y = frame.shape[0] / 2
                 mid_x = (160 + x) / 2
                 mid_y = (50 + y) / 2
 
-                # Calculating distance
+                # Calculating the length of arrow
                 ed = math.sqrt(
                     math.pow(mid_x - c_x, 2) + math.pow(mid_y - c_y, 2) * 1.0
                 )
@@ -156,6 +155,10 @@ def draw_outputs(coords, frame, initial_w, initial_h, x, k, prob_threshold):
     if current_count < 1:
         k += 1
 
+    # ed is the length of the arrow and k is the previous count
+    # if the length of arrow is less than 110, if the person is exiting the frame
+    # if the value of k is less than  10, we increment values of k, to keep a check on value of k, we will set value of k to be zero
+    # we set the current count value to be equal to 1 thoughout the time person is in frame
     if ed < 110 and k < 10:
         current_count = 1
         k += 1

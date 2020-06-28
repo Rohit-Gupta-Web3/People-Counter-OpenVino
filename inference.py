@@ -28,6 +28,7 @@ from openvino.inference_engine import (
     IENetwork,
     IEPlugin,
 )  # used to load the IE python API
+import logging as log
 
 
 class Network:
@@ -63,18 +64,28 @@ class Network:
         model_xml = self.model
         model_bin = os.path.splitext(model_xml)[0] + ".bin"
         self.net = IENetwork(model=model_xml, weights=model_bin)
-        self.supported = self.ie.get_supported_layers(self.net)
-
+        
+        self.check_cpu_support()
+        
         if self.cpu_ex and "CPU" in self.device:
             self.ie.add_cpu_extension(self.cpu_ex)
+        log.info("After loading CPU extension\n")
+        self.check_cpu_support()
         self.ex_net = self.ie.load(self.net)
-
+        
         # to get the shape of input and output and set each to a class variable
         self.inp = next(iter(self.net.inputs))
         self.out = next(iter(self.net.outputs))
 
         # Note: You may need to update the function parameters. ###
         return self.ex_net
+    
+    def check_cpu_support(self):
+        self.supported = self.ie.get_supported_layers(self.net)
+        unsupported_layers = [
+            layer for layer in self.net.layers.keys() if layer not in self.supported
+        ]
+        log.error("list of unsupported layers: {}".format(unsupported_layers))
 
     def get_input_shape(self):
         """
